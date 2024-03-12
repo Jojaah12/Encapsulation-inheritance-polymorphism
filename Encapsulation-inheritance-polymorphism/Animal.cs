@@ -22,7 +22,7 @@ namespace Encapsulation_inheritance_polymorphism
         }
 
         // Abstract method making sound
-        public abstract void MakeSound();
+        public abstract void DoSound();
 
     }
 }
