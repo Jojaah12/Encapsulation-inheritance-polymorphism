@@ -4,10 +4,8 @@
     {
         static void Main(string[] args)
         {
-            // Create a list to hold animals
             List<Animal> Animals = new List<Animal>();
 
-            // Add animals to the list
             Animals.Add(new Dog("Buddy", 20.5, 3, "Golden Retriever"));
             Animals.Add(new Horse("Jack", 140.5, 10, 5.5));
             Animals.Add(new Hedgehog("Sonic", 1.2, 2, 100));
@@ -18,17 +16,17 @@
             Animals.Add(new Flamingo("Flami", 4.0, 3, 1.5, "Pink"));
             Animals.Add(new Swan("Swani", 6.0, 5, 3.0, 2.5));
 
-            // Print out the list of animals and call their DoSound method
             Console.WriteLine("List of animals:");
             foreach (Animal animal in Animals)
             {
                 Console.WriteLine($"- {animal.Name} ({animal.GetType().Name}):");
                 animal.DoSound();
-            }
 
-            // Keep the console window open in debug mode
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+                if (animal is IPerson)
+                {
+                    ((IPerson)animal).Talk();
+                }
+            }
         }
     }
 }
