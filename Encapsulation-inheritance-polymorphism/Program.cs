@@ -18,11 +18,12 @@
             Animals.Add(new Flamingo("Flami", 4.0, 3, 1.5, "Pink"));
             Animals.Add(new Swan("Swani", 6.0, 5, 3.0, 2.5));
 
-            // Print out the list of animals
+            // Print out the list of animals and call their DoSound method
             Console.WriteLine("List of animals:");
             foreach (Animal animal in Animals)
             {
-                Console.WriteLine($"- {animal.Name} ({animal.GetType().Name})");
+                Console.WriteLine($"- {animal.Name} ({animal.GetType().Name}):");
+                animal.DoSound();
             }
 
             // Keep the console window open in debug mode
