@@ -14,6 +14,10 @@ namespace Encapsulation_inheritance_polymorphism
         {
             Breed = breed;
         }
+        public override string Stats()
+        {
+            return $"Name: {Name}, Weight: {Weight} kg, Age: {Age} years, Breed: {Breed}";
+        }
         public override void DoSound()
         {
             Console.WriteLine("woff woff");

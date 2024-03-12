@@ -18,5 +18,10 @@ namespace Encapsulation_inheritance_polymorphism
         {
             Console.WriteLine("Howl howl");
         }
+
+        public override string Stats()
+        {
+            return $"Name: {Name}, Weight: {Weight}, Age: {Age}, Pack Size: {PackSize}";
+        }
     }
 }

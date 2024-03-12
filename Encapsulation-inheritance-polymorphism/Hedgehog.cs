@@ -20,5 +20,10 @@ namespace Encapsulation_inheritance_polymorphism
         {
             Console.WriteLine("Snuffle snuffle");
         }
+
+        public override string Stats()
+        {
+            return $"Name: {Name}, Weight: {Weight}, Age: {Age}, Number of Spikes: {NumberOfSpikes}";
+        }
     }
 }

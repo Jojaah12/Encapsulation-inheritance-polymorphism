@@ -20,5 +20,10 @@ namespace Encapsulation_inheritance_polymorphism
         {
             Console.WriteLine("Clip clop");
         }
+
+        public override string Stats()
+        {
+            return $"Name: {Name}, Weight: {Weight}, Age: {Age}, Height at Withers: {HeightAtWithers}";
+        }
     }
 }

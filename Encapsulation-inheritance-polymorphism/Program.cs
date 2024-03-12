@@ -4,20 +4,28 @@
     {
         static void Main(string[] args)
         {
-            Dog dog = new Dog("Buddy", 20.5, 3, "Brown");
-            Horse horse = new Horse("Jack", 140.5, 10, 5.5);
-            Hedgehog hedgehog = new Hedgehog("Sonic", 1.2, 2, 100);
-            Worm worm = new Worm("Slinky", 0.1, 1, true);
-            Bird bird = new Bird("Chirpy", 0.5, 1, 0.2);
-            Wolf wolf = new Wolf("Alpha", 35.7, 5, 8);
+            // Create a list to hold animals
+            List<Animal> Animals = new List<Animal>();
 
-            dog.DoSound();
-            horse.DoSound();
-            hedgehog.DoSound();
-            worm.DoSound();
-            bird.DoSound();
-            wolf.DoSound();
+            // Add animals to the list
+            Animals.Add(new Dog("Buddy", 20.5, 3, "Golden Retriever"));
+            Animals.Add(new Horse("Jack", 140.5, 10, 5.5));
+            Animals.Add(new Hedgehog("Sonic", 1.2, 2, 100));
+            Animals.Add(new Worm("Slinky", 0.1, 1, true));
+            Animals.Add(new Bird("Chirpy", 0.5, 1, 0.2));
+            Animals.Add(new Wolf("Alpha", 35.7, 5, 8));
+            Animals.Add(new Pelican("Peli", 5.0, 4, 2.0, 3.0));
+            Animals.Add(new Flamingo("Flami", 4.0, 3, 1.5, "Pink"));
+            Animals.Add(new Swan("Swani", 6.0, 5, 3.0, 2.5));
 
+            // Print out the list of animals
+            Console.WriteLine("List of animals:");
+            foreach (Animal animal in Animals)
+            {
+                Console.WriteLine($"- {animal.Name} ({animal.GetType().Name})");
+            }
+
+            // Keep the console window open in debug mode
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }

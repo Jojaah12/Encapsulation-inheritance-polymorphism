@@ -24,5 +24,10 @@ namespace Encapsulation_inheritance_polymorphism
         // Abstract method making sound
         public abstract void DoSound();
 
+        public virtual string Stats()
+        {
+            return $"Name: {Name}, Weight: {Weight} kg, Age: {Age} years";
+        }
+
     }
 }
