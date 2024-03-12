@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-            // Create instances of Dog, Horse, Hedgehog, Worm, Bird, and Wolf
             Dog dog = new Dog("Buddy", 20.5, 3, "Brown");
             Horse horse = new Horse("Jack", 140.5, 10, 5.5);
             Hedgehog hedgehog = new Hedgehog("Sonic", 1.2, 2, 100);
@@ -12,7 +11,6 @@
             Bird bird = new Bird("Chirpy", 0.5, 1, 0.2);
             Wolf wolf = new Wolf("Alpha", 35.7, 5, 8);
 
-            // Call the DoSound method for each animal
             dog.DoSound();
             horse.DoSound();
             hedgehog.DoSound();
@@ -20,7 +18,6 @@
             bird.DoSound();
             wolf.DoSound();
 
-            // Keep the console window open in debug mode
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }
