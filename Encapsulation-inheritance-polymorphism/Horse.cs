@@ -17,7 +17,7 @@ namespace Encapsulation_inheritance_polymorphism
             Color = color;
         }
 
-        public override void MakeSound()
+        public override void DoSound()
         {
             Console.WriteLine("Clip clop");
         }
