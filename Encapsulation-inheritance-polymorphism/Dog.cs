@@ -22,5 +22,13 @@ namespace Encapsulation_inheritance_polymorphism
         {
             Console.WriteLine("woff woff");
         }
+
+        public string GenerateRandomString()
+        {
+            Random random = new Random();
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, 5)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
     }
 }
