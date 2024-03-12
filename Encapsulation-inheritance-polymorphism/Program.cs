@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            NumericInputError numericInputError = new NumericInputError();
+            TextInputError textInputError = new TextInputError();
+
+            Console.WriteLine("NumericInputError message: " + numericInputError.UEMessage());
+            Console.WriteLine("TextInputError message: " + textInputError.UEMessage());
         }
     }
 }
