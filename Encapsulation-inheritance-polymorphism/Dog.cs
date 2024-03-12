@@ -8,14 +8,12 @@ namespace Encapsulation_inheritance_polymorphism
 {
     public class Dog : Animal
     {
-        // unique prop for horse
-        public string Color { get; set; }
-
-        // Construtor
-        public Dog(string name, double weghit, int age, string color) : base(name, weghit, age)
+        // Unique property for Dog
+        public string Breed { get; set; }
+        public Dog(string name, double weight, int age, string breed) : base(name, weight, age)
         {
+            Breed = breed;
         }
-
         public override void DoSound()
         {
             Console.WriteLine("woff woff");

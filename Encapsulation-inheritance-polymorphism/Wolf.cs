@@ -8,10 +8,12 @@ namespace Encapsulation_inheritance_polymorphism
 {
     public class Wolf : Animal
     {
-        public Wolf(string name, double weight, int age) : base(name, weight, age)
+        // Unique property for Wolf
+        public int PackSize { get; set; }
+        public Wolf(string name, double weight, int age, int packSize) : base(name, weight, age)
         {
+            PackSize = packSize;
         }
-
         public override void DoSound()
         {
             Console.WriteLine("Howl howl");

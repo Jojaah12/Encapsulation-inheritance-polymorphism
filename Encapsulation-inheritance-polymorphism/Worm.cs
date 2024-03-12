@@ -8,10 +8,12 @@ namespace Encapsulation_inheritance_polymorphism
 {
     public class Worm : Animal
     {
-        public Worm(string name, double weight, int age) : base(name, weight, age)
+        // Unique property for Worm
+        public bool IsPoisonous { get; set; }
+        public Worm(string name, double weight, int age, bool isPoisonous) : base(name, weight, age)
         {
+            IsPoisonous = isPoisonous;
         }
-
         public override void DoSound()
         {
             Console.WriteLine("Squirm squirm");

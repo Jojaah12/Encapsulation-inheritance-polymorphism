@@ -8,12 +8,12 @@ namespace Encapsulation_inheritance_polymorphism
 {
     public class Horse : Animal
     {
-        // unique prop for horse
-        public string Color { get; set; }
+        // Unique property for Horse
+        public double HeightAtWithers { get; set; }
 
-        // Construtor
-        public Horse(string name, double weghit, int age, string color) : base(name, weghit, age)
+        public Horse(string name, double weight, int age, double heightAtWithers) : base(name, weight, age)
         {
+            HeightAtWithers = heightAtWithers;
         }
 
         public override void DoSound()
